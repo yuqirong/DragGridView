@@ -1,11 +1,10 @@
 package com.yuqirong.draggridview.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.TextView;
 
 import com.yuqirong.draggridview.R;
@@ -15,7 +14,7 @@ import com.yuqirong.draggridview.view.DragGridView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private DragGridView otherGridView;
     private DragGridView mGridView;
@@ -27,7 +26,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         mGridView = (DragGridView) findViewById(R.id.mGridView);
         otherGridView = (DragGridView) findViewById(R.id.otherGridView);
