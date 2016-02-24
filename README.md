@@ -56,7 +56,14 @@
         }
     }
 
-PS：该DragGridView内部实际是应用了WindowManager，所以需要去除标题栏，以避免计算y轴距离不准确。如果你的MainActivity继承自Activity，则需要加上`requestWindowFeature(Window.FEATURE_NO_TITLE);`；或者继承自AppCompatActivity，需要`getSupportActionBar().hide();`。另外如果你的应用一定需要标题栏的存在，那么需要额外加上标题栏的高度。
+PS：该DragGridView内部实际是应用了WindowManager，所以需要去除标题栏，以避免计算y轴距离不准确。如果你的MainActivity继承自Activity，则需要加上`requestWindowFeature(Window.FEATURE_NO_TITLE);`；或者继承自AppCompatActivity，需要`getSupportActionBar().hide();`。另外如果你的应用一定需要标题栏的存在，那么需要额外加上标题栏的高度。(The interior is practical DragGridView applied WindowManager, so it is necessary to remove the title bar, in order to avoid calculating the y-axis distance is not accurate. If you MainActivity extends Activity, you need to add `requestWindowFeature (Window.FEATURE_NO_TITLE);`; or extends AppCompatActivity, need `getSupportActionBar().hide();`. Also, if your application must require the presence of the title bar, you need to add extra height of the title bar.)
+
+###step 3###
+增加显示悬浮窗的权限。(add SYSTEM_ALERT_WINDOW user permission.)
+	
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	
+最后，尽情地使用吧！(Finally,enjoy it!)
 
 ##致谢 Thanks##
 
