@@ -68,8 +68,9 @@ PS：该DragGridView内部实际是应用了WindowManager，所以需要去除�
 最后，尽情地使用吧！(Finally,enjoy it!)
 
 ##致谢 Thanks##
+Inspired by
 
-[TopNews](https://github.com/Rano1/TopNews) created by [Rano1](https://github.com/Rano1)
+* [TopNews](https://github.com/Rano1/TopNews) created by [Rano1](https://github.com/Rano1)
 
 ##联系方式 Contact Me##
 新浪微博 Sina Weibo：[@活得好像一条狗](http://weibo.com/yyyuqirong) 
