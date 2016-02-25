@@ -1,5 +1,7 @@
 # DragGridView
 
+[![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 ##介绍 Introduction##
 **DragGridView** - 可拖拽item来交换位置的GridView。(The GridView can drag items to exchange their positions.)
 
