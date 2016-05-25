@@ -1,7 +1,10 @@
 package com.yuqirong.draggridview.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.os.Build;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -94,7 +97,19 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
         this.tempPosition = position;
         mX = mWindowX - view.getLeft() - this.getLeft();
         mY = mWindowY - view.getTop() - this.getTop();
-        initWindow();
+        // 如果是Android 6.0 要动态申请权限
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (Settings.canDrawOverlays(getContext())) {
+                initWindow();
+            } else {
+                // 跳转到悬浮窗权限管理界面
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                getContext().startActivity(intent);
+            }
+        } else {
+            // 如果小于Android 6.0 则直接执行
+            initWindow();
+        }
         return true;
     }
 

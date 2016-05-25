@@ -39,13 +39,6 @@ public class MainActivity extends AppCompatActivity {
         MAdapter mAdapter = new MAdapter(list);
         mGridView.setAdapter(mAdapter);
 
-
-//        list2.add("晴天");
-//        list2.add("阴天");
-//        list2.add("雨天");
-//        list2.add("雪天");
-//        list2.add("雾天");
-
         list2.add("1");
         list2.add("2");
         list2.add("3");
